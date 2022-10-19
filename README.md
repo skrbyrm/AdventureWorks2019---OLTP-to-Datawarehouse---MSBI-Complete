@@ -1,6 +1,6 @@
-# Implementation of a DW - end-to end MSBI solution 
+# Implementation of a DW - MSBI Solution-SSIS-SSAS-SSRS
 
-## AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete
+## AdventureWorks2019---OLTP-to-Datawarehouse--- end-to end - MSBI-Complete 
 
 ![StagingMain](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/StagingMain.PNG)
 
