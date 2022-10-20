@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{03593B1A-8EEF-46B9-BDBA-7A0CBF6F8E34}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{323DEDFF-8C39-48D9-B2D0-C4C2EF25EA63}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -108,6 +108,17 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="275,191"
+          Size="275,234"
+          Id="Package\DataWareHouse Sequence Container"
+          TopLeft="169,291" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Staging Data Sequence Container\DimensionalTables Package Task"
+          TopLeft="6.5,8" />
         <NodeLayout
           Size="225,42"
           Id="Package\Staging Data Sequence Container\IncrementalLoad Package Task"
@@ -146,10 +157,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="234,42"
-          Id="Package\Staging Data Sequence Container\DimensionalTables Package Task"
-          TopLeft="6.5,8" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -157,13 +164,6 @@
           Size="265,234"
           Id="Package\Staging Data Sequence Container"
           TopLeft="44,18" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="275,191"
-          Size="275,234"
-          Id="Package\DataWareHouse Sequence Container"
-          TopLeft="169,291" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="176.5,252">

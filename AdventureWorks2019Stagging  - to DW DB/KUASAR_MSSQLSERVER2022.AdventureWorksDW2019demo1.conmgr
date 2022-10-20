@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="KUASAR_MSSQLSERVER2022.AdventureWorksDW2019demo1"
+  DTS:DTSID="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=KUASAR\MSSQLSERVER2022;Initial Catalog=AdventureWorksDW2019demo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-AdventureWorks2019Stagging  - to DW DB-{E008B82D-36F3-4DEB-AA11-277B3258E151}KUASAR\MSSQLSERVER2022.AdventureWorksDW2019d;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

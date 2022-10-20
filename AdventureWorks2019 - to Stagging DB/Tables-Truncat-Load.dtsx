@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{B534B00E-DA20-4EBC-92A0-E6233777141C}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{FC56DBB3-2EC5-477D-99E6-33DA5BA877C9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -568,7 +568,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Address"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -965,7 +965,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- BusinessEntity"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1372,7 +1372,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Currency"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1848,7 +1848,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Customer"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2334,7 +2334,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- EmpDeptHist"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2775,7 +2775,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- EmpPayHist"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3566,7 +3566,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Employee"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4275,7 +4275,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Person"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5347,7 +5347,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Product"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5777,7 +5777,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- ProductCategory"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6123,7 +6123,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- ProductSubCategory"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6181,7 +6181,7 @@
                       description="The Destination database table name."
                       expressionType="Notify"
                       name="TableOrViewName"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"erp"."Person"</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"erp"."SalesTerritory"</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
@@ -6217,166 +6217,54 @@
                       name="ADO NET Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[BusinessEntityID]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TerritoryID]"
                           cachedDataType="i4"
-                          cachedName="BusinessEntityID"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[BusinessEntityID]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[BusinessEntityID]" />
+                          cachedName="TerritoryID"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TerritoryID]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[TerritoryID]" />
                         <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PersonType]"
-                          cachedDataType="wstr"
-                          cachedLength="2"
-                          cachedName="PersonType"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PersonType]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PersonType]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[NameStyle]"
-                          cachedDataType="bool"
-                          cachedName="NameStyle"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NameStyle]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameStyle]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Title]"
-                          cachedDataType="wstr"
-                          cachedLength="8"
-                          cachedName="Title"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Title]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Title]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[FirstName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Name]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="FirstName"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FirstName]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FirstName]" />
+                          cachedName="Name"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Name]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]" />
                         <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[MiddleName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CountryRegionCode]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="CountryRegionCode"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CountryRegionCode]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryRegionCode]" />
+                        <inputColumn
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Group]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="MiddleName"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MiddleName]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[MiddleName]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LastName]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="LastName"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LastName]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastName]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Suffix]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="Suffix"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Suffix]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Suffix]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[EmailPromotion]"
-                          cachedDataType="i4"
-                          cachedName="EmailPromotion"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EmailPromotion]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailPromotion]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[AdditionalContactInfo]"
-                          cachedDataType="nText"
-                          cachedName="AdditionalContactInfo"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[AdditionalContactInfo]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[AdditionalContactInfo]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Demographics]"
-                          cachedDataType="nText"
-                          cachedName="Demographics"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Demographics]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Demographics]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[rowguid]"
-                          cachedDataType="guid"
-                          cachedName="rowguid"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[rowguid]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[rowguid]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ModifiedDate]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="ModifiedDate"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[ModifiedDate]" />
-                        <inputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SSISTrackID]"
-                          cachedDataType="i8"
-                          cachedName="SSISTrackID"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SSISTrackId]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[SSISTrackID]" />
+                          cachedName="Group"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Group]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Group]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[rowguid]"
-                          dataType="guid"
-                          name="rowguid" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
-                          dataType="dbTimeStamp"
-                          name="ModifiedDate" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[BusinessEntityID]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TerritoryID]"
                           dataType="i4"
-                          name="BusinessEntityID" />
+                          name="TerritoryID" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PersonType]"
-                          dataType="wstr"
-                          length="2"
-                          name="PersonType" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[NameStyle]"
-                          dataType="bool"
-                          name="NameStyle" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Title]"
-                          dataType="wstr"
-                          length="8"
-                          name="Title" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FirstName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Name]"
                           dataType="wstr"
                           length="50"
-                          name="FirstName" />
+                          name="Name" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[MiddleName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[CountryRegionCode]"
+                          dataType="wstr"
+                          length="3"
+                          name="CountryRegionCode" />
+                        <externalMetadataColumn
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Group]"
                           dataType="wstr"
                           length="50"
-                          name="MiddleName" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LastName]"
-                          dataType="wstr"
-                          length="50"
-                          name="LastName" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Suffix]"
-                          dataType="wstr"
-                          length="10"
-                          name="Suffix" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[EmailPromotion]"
-                          dataType="i4"
-                          name="EmailPromotion" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[AdditionalContactInfo]"
-                          dataType="wstr"
-                          length="2147483647"
-                          name="AdditionalContactInfo" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Demographics]"
-                          dataType="wstr"
-                          length="2147483647"
-                          name="Demographics" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Created_Dt]"
-                          dataType="dbTimeStamp"
-                          name="Created_Dt" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SSISTrackId]"
-                          dataType="i8"
-                          name="SSISTrackId" />
+                          name="Group" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -6433,7 +6321,7 @@
                       description="The Source database table name."
                       expressionType="Notify"
                       name="TableOrViewName"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"Person"."Person"</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"Sales"."SalesTerritory"</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the mode to retrieve external column information"
@@ -6457,109 +6345,79 @@
                       name="ADO NET Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[BusinessEntityID]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[TerritoryID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BusinessEntityID]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[BusinessEntityID]"
-                          name="BusinessEntityID"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TerritoryID]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[TerritoryID]"
+                          name="TerritoryID"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PersonType]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PersonType]"
-                          length="2"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[PersonType]"
-                          name="PersonType"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameStyle]"
-                          dataType="bool"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameStyle]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameStyle]"
-                          name="NameStyle"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Title]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Title]"
-                          length="8"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Title]"
-                          name="Title"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FirstName]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FirstName]"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Name]"
                           length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[FirstName]"
-                          name="FirstName"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]"
+                          name="Name"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[MiddleName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryRegionCode]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MiddleName]"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryRegionCode]"
+                          length="3"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CountryRegionCode]"
+                          name="CountryRegionCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Group]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Group]"
                           length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[MiddleName]"
-                          name="MiddleName"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Group]"
+                          name="Group"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastName]"
-                          dataType="wstr"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SalesYTD]"
+                          dataType="cy"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastName]"
-                          length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastName]"
-                          name="LastName"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SalesYTD]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SalesYTD]"
+                          name="SalesYTD"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Suffix]"
-                          dataType="wstr"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SalesLastYear]"
+                          dataType="cy"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Suffix]"
-                          length="10"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Suffix]"
-                          name="Suffix"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SalesLastYear]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[SalesLastYear]"
+                          name="SalesLastYear"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailPromotion]"
-                          dataType="i4"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CostYTD]"
+                          dataType="cy"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EmailPromotion]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[EmailPromotion]"
-                          name="EmailPromotion"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CostYTD]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CostYTD]"
+                          name="CostYTD"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[AdditionalContactInfo]"
-                          dataType="nText"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CostLastYear]"
+                          dataType="cy"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AdditionalContactInfo]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[AdditionalContactInfo]"
-                          name="AdditionalContactInfo"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Demographics]"
-                          dataType="nText"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Demographics]"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[Demographics]"
-                          name="Demographics"
+                          externalMetadataColumnId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CostLastYear]"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[CostLastYear]"
+                          name="CostLastYear"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].Columns[rowguid]"
@@ -6583,55 +6441,40 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BusinessEntityID]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TerritoryID]"
                           dataType="i4"
-                          name="BusinessEntityID" />
+                          name="TerritoryID" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PersonType]"
-                          dataType="wstr"
-                          length="2"
-                          name="PersonType" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameStyle]"
-                          dataType="bool"
-                          name="NameStyle" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Title]"
-                          dataType="wstr"
-                          length="8"
-                          name="Title" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FirstName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Name]"
                           dataType="wstr"
                           length="50"
-                          name="FirstName" />
+                          name="Name" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MiddleName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CountryRegionCode]"
+                          dataType="wstr"
+                          length="3"
+                          name="CountryRegionCode" />
+                        <externalMetadataColumn
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Group]"
                           dataType="wstr"
                           length="50"
-                          name="MiddleName" />
+                          name="Group" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastName]"
-                          dataType="wstr"
-                          length="50"
-                          name="LastName" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SalesYTD]"
+                          dataType="cy"
+                          name="SalesYTD" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Suffix]"
-                          dataType="wstr"
-                          length="10"
-                          name="Suffix" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[SalesLastYear]"
+                          dataType="cy"
+                          name="SalesLastYear" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EmailPromotion]"
-                          dataType="i4"
-                          name="EmailPromotion" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CostYTD]"
+                          dataType="cy"
+                          name="CostYTD" />
                         <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AdditionalContactInfo]"
-                          dataType="nText"
-                          name="AdditionalContactInfo" />
-                        <externalMetadataColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Demographics]"
-                          dataType="nText"
-                          name="Demographics" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CostLastYear]"
+                          dataType="cy"
+                          name="CostLastYear" />
                         <externalMetadataColumn
                           refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[rowguid]"
                           dataType="guid"
@@ -6648,66 +6491,48 @@
                       name="ADO NET Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BusinessEntityID]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TerritoryID]"
                           dataType="i4"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BusinessEntityID]"
-                          name="BusinessEntityID" />
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TerritoryID]"
+                          name="TerritoryID" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PersonType]"
-                          dataType="wstr"
-                          length="2"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PersonType]"
-                          name="PersonType" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameStyle]"
-                          dataType="bool"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameStyle]"
-                          name="NameStyle" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Title]"
-                          dataType="wstr"
-                          length="8"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Title]"
-                          name="Title" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FirstName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Name]"
                           dataType="wstr"
                           length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FirstName]"
-                          name="FirstName" />
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Name]"
+                          name="Name" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MiddleName]"
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryRegionCode]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CountryRegionCode]"
+                          name="CountryRegionCode" />
+                        <outputColumn
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Group]"
                           dataType="wstr"
                           length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MiddleName]"
-                          name="MiddleName" />
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Group]"
+                          name="Group" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastName]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastName]"
-                          name="LastName" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SalesYTD]"
+                          dataType="cy"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SalesYTD]"
+                          name="SalesYTD" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Suffix]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Suffix]"
-                          name="Suffix" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SalesLastYear]"
+                          dataType="cy"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[SalesLastYear]"
+                          name="SalesLastYear" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EmailPromotion]"
-                          dataType="i4"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EmailPromotion]"
-                          name="EmailPromotion" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CostYTD]"
+                          dataType="cy"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CostYTD]"
+                          name="CostYTD" />
                         <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AdditionalContactInfo]"
-                          dataType="nText"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AdditionalContactInfo]"
-                          name="AdditionalContactInfo" />
-                        <outputColumn
-                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Demographics]"
-                          dataType="nText"
-                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Demographics]"
-                          name="Demographics" />
+                          refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CostLastYear]"
+                          dataType="cy"
+                          lineageId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CostLastYear]"
+                          name="CostLastYear" />
                         <outputColumn
                           refId="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[rowguid]"
                           dataType="guid"
@@ -6832,7 +6657,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- SalesTerritory"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7295,7 +7120,7 @@
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate- Store"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7327,7 +7152,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="151,42"
           Id="Package\Address to StagingDB\Data Flow Task"
@@ -7355,13 +7180,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="176,204"
+          PanelSize="204,204"
           Size="204,43"
           Id="Package\Address to StagingDB"
           TopLeft="8,5.5" />
@@ -7392,13 +7219,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="206,204"
+          PanelSize="234,204"
           Size="234,43"
           Id="Package\BusinessEntity to StagindDB"
           TopLeft="220.5,6.33333333333322" />
@@ -7429,13 +7258,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="181,204"
+          PanelSize="209,204"
           Size="209,43"
           Id="Package\Currency to StagingDB"
           TopLeft="269.333333333333,234.666666666667" />
@@ -7471,11 +7302,126 @@
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="184,204"
-          Size="212,43"
+          IsExpanded="True"
+          PanelSize="212,204"
+          Size="212,247"
           Id="Package\Customer to StagingDB"
-          TopLeft="687,7.16666666666656" />
+          TopLeft="963,24.1666666666666" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task"
+          TopLeft="24.5,107.5" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\EmploDeptHist to StagindDB\Truncate- EmpDeptHist"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\EmploDeptHist to StagindDB.PrecedenceConstraints[Constraint]"
+          TopLeft="100,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="204,204"
+          Size="204,43"
+          Id="Package\EmploDeptHist to StagindDB"
+          TopLeft="704.66666666667,151.333333333333" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task"
+          TopLeft="21.5,107.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\EmploPayHist to StagindDB\Truncate- EmpPayHist"
+          TopLeft="8.83333333333334,19.6666666666667" />
+        <EdgeLayout
+          Id="Package\EmploPayHist to StagindDB.PrecedenceConstraints[Constraint]"
+          TopLeft="98.6666666666667,61.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.8333333333333"
+              Start="0,0"
+              End="0,38.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="231,204"
+          Size="231,43"
+          Id="Package\EmploPayHist to StagindDB"
+          TopLeft="11.8333333333331,328" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Employee to StagindDB\Data Flow Task"
+          TopLeft="16.5,107.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Employee to StagindDB\Truncate- Employee"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\Employee to StagindDB.PrecedenceConstraints[Constraint]"
+          TopLeft="92,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="212,204"
+          Size="212,43"
+          Id="Package\Employee to StagindDB"
+          TopLeft="274.000000000001,364.333333333333" />
         <NodeLayout
           Size="151,42"
           Id="Package\Person to StagindDB\Data Flow Task"
@@ -7503,13 +7449,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="171,204"
+          PanelSize="199,204"
           Size="199,43"
           Id="Package\Person to StagindDB"
           TopLeft="12.8333333333333,75.4999999999997" />
@@ -7540,13 +7488,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="175,204"
+          PanelSize="203,204"
           Size="203,43"
           Id="Package\Product to StagingDB"
           TopLeft="229.5,75.4999999999997" />
@@ -7577,13 +7527,15 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="217,204"
+          PanelSize="218,204"
           Size="218,43"
           Id="Package\ProductCat to StagingDB"
           TopLeft="275.333333333333,298.5" />
@@ -7614,7 +7566,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -7657,7 +7611,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="204,204"
+          PanelSize="232,204"
           Size="232,43"
           Id="Package\SalesTerritory to StagindDB"
           TopLeft="12.3333333333342,148.833333333333" />
@@ -7688,127 +7642,18 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="164,204"
+          PanelSize="192,204"
           Size="192,43"
           Id="Package\Store to StagindDB"
           TopLeft="262.000000000001,148.833333333333" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Employee to StagindDB\Data Flow Task"
-          TopLeft="16.5,107.5" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Employee to StagindDB\Truncate- Employee"
-          TopLeft="5.50000000000001,5.5" />
-        <EdgeLayout
-          Id="Package\Employee to StagindDB.PrecedenceConstraints[Constraint]"
-          TopLeft="92,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="184,204"
-          Size="212,43"
-          Id="Package\Employee to StagindDB"
-          TopLeft="274.000000000001,364.333333333333" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task"
-          TopLeft="24.5,107.5" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\EmploDeptHist to StagindDB\Truncate- EmpDeptHist"
-          TopLeft="5.50000000000001,5.5" />
-        <EdgeLayout
-          Id="Package\EmploDeptHist to StagindDB.PrecedenceConstraints[Constraint]"
-          TopLeft="100,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="200,204"
-          Size="204,43"
-          Id="Package\EmploDeptHist to StagindDB"
-          TopLeft="704.66666666667,151.333333333333" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task"
-          TopLeft="21.5,107.5" />
-        <NodeLayout
-          Size="183,42"
-          Id="Package\EmploPayHist to StagindDB\Truncate- EmpPayHist"
-          TopLeft="8.83333333333334,19.6666666666667" />
-        <EdgeLayout
-          Id="Package\EmploPayHist to StagindDB.PrecedenceConstraints[Constraint]"
-          TopLeft="98.6666666666667,61.6666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.8333333333333"
-              Start="0,0"
-              End="0,38.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="231,204"
-          Size="231,247"
-          Id="Package\EmploPayHist to StagindDB"
-          TopLeft="12.8333333333331,223" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -7816,7 +7661,7 @@
     design-time-name="Package\Address to StagingDB\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="158,42"
           Id="Package\Address to StagingDB\Data Flow Task\ADO NET Source"
@@ -7848,7 +7693,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7870,7 +7717,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7896,7 +7745,7 @@
     design-time-name="Package\BusinessEntity to StagindDB\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="179,42"
           Id="Package\BusinessEntity to StagindDB\Data Flow Task\ADO NET Destination"
@@ -7928,7 +7777,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7950,7 +7801,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7976,7 +7829,7 @@
     design-time-name="Package\Currency to StagingDB\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="179,42"
           Id="Package\Currency to StagingDB\Data Flow Task\ADO NET Destination"
@@ -8008,7 +7861,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8030,7 +7885,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8126,6 +7983,258 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Customer to StagingDB\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\Derived Column"
+          TopLeft="74,133" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Destination"
+          TopLeft="59,225" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Source"
+          TopLeft="67,37" />
+        <EdgeLayout
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="149.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\EmploDeptHist to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="148.5,79">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Source"
+          TopLeft="67,37" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task\Derived Column"
+          TopLeft="74,133" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Destination"
+          TopLeft="59,225" />
+        <EdgeLayout
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="149.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\EmploPayHist to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="148.5,79">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Employee to StagindDB\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Employee to StagindDB\Data Flow Task\ADO NET Source"
+          TopLeft="67,37" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Employee to StagindDB\Data Flow Task\Derived Column"
+          TopLeft="74,133" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Employee to StagindDB\Data Flow Task\ADO NET Destination"
+          TopLeft="59,225" />
+        <EdgeLayout
+          Id="Package\Employee to StagindDB\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="149.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Employee to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="148.5,79">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Employee to StagindDB\Data Flow Task\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Employee to StagindDB\Data Flow Task\ADO NET Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8342,13 +8451,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="179,42"
-          Id="Package\ProductSubC to StagingDB\Data Flow Task\ADO NET Destination"
-          TopLeft="62,126" />
-        <NodeLayout
           Size="158,42"
           Id="Package\ProductSubC to StagingDB\Data Flow Task\ADO NET Source"
           TopLeft="67,37" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\ProductSubC to StagingDB\Data Flow Task\ADO NET Destination"
+          TopLeft="62,126" />
         <EdgeLayout
           Id="Package\ProductSubC to StagingDB\Data Flow Task.Paths[ADO NET Source Output]"
           TopLeft="148.75,79">
@@ -8380,7 +8489,7 @@
     design-time-name="Package\SalesTerritory to StagindDB\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="154,42"
           Id="Package\SalesTerritory to StagindDB\Data Flow Task\Derived Column"
@@ -8412,9 +8521,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8436,53 +8543,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesTerritory to StagindDB\Data Flow Task\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Store to StagindDB\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154,42"
           Id="Package\Store to StagindDB\Data Flow Task\Derived Column"
           TopLeft="74,133" />
         <NodeLayout
-          Size="179,42"
-          Id="Package\Store to StagindDB\Data Flow Task\ADO NET Destination"
-          TopLeft="59,225" />
-        <NodeLayout
           Size="158,42"
           Id="Package\Store to StagindDB\Data Flow Task\ADO NET Source"
           TopLeft="67,37" />
-        <EdgeLayout
-          Id="Package\Store to StagindDB\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="149.75,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Store to StagindDB\Data Flow Task\ADO NET Destination"
+          TopLeft="59,225" />
         <EdgeLayout
           Id="Package\Store to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
           TopLeft="148.5,79">
@@ -8502,20 +8601,38 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Store to StagindDB\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="149.75,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Store to StagindDB\Data Flow Task\ADO NET Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Store to StagindDB\Data Flow Task\ADO NET Source">
     <Properties>
@@ -8524,240 +8641,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Employee to StagindDB\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Employee to StagindDB\Data Flow Task\Derived Column"
-          TopLeft="74,133" />
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Employee to StagindDB\Data Flow Task\ADO NET Destination"
-          TopLeft="59,225" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Employee to StagindDB\Data Flow Task\ADO NET Source"
-          TopLeft="67,37" />
-        <EdgeLayout
-          Id="Package\Employee to StagindDB\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="149.75,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Employee to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="148.5,79">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Employee to StagindDB\Data Flow Task\ADO NET Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Employee to StagindDB\Data Flow Task\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154,42"
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\Derived Column"
-          TopLeft="74,133" />
-        <NodeLayout
-          Size="179,42"
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Destination"
-          TopLeft="59,225" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Source"
-          TopLeft="67,37" />
-        <EdgeLayout
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="149.75,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\EmploDeptHist to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="148.5,79">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EmploDeptHist to StagindDB\Data Flow Task\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154,42"
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task\Derived Column"
-          TopLeft="74,133" />
-        <NodeLayout
-          Size="179,42"
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Destination"
-          TopLeft="59,225" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Source"
-          TopLeft="67,37" />
-        <EdgeLayout
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="149.75,175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\EmploPayHist to StagindDB\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="148.5,79">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\EmploPayHist to StagindDB\Data Flow Task\ADO NET Source">
+    design-time-name="Package\Store to StagindDB\Data Flow Task\ADO NET Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
