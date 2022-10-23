@@ -1,13 +1,16 @@
-# Implementation of a DW - MSBI Solution-SSIS-SSAS-SSRS
-
-## AdventureWorks2019---OLTP-to-Datawarehouse--- end-to end - MSBI-Complete 
+# Implementation of a DW - MSBI Solution-SSIS-SSAS-Power BI
+## Business Key Workshop
+### AdventureWorks2019---OLTP-to-Datawarehouse--- end-to end - MSBI-Complete 
 
 ### The project content will continue step by step.
-Tools Included;
-* SSIS
-* SSAS
-* SSRS
-* Power BI
+Topics;
+#### 1. SSIS
+  * ETL (Load Source to Staging DB Layer)
+  * ETL (Load Satging to Data Warehouse)
+#### 2. SSAS
+  * Create a Tabular Model
+#### 3. Power BI
+  * Create a Simple Report
 
 
 #### Main Package
@@ -40,3 +43,17 @@ Tools Included;
 
 #### Run Stored Procedure in package
 ![](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/EXEC.PNG)
+
+#### SSAS - Tabular
+
+![](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/SSAS-Tabular.PNG)
+
+
+#### Power BI - Connect to Analysis Services
+![](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/powerSSAScon1.PNG)
+
+![](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/powerSSAScon2.PNG)
+
+#### Power BI - Simple Report
+![](https://github.com/skrbyrm/AdventureWorks2019---OLTP-to-Datawarehouse---MSBI-Complete/blob/master/img/PowerBIReport.png)
+
