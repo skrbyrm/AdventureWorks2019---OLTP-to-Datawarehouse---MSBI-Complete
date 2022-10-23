@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{915F308A-852D-48F0-BFF1-EF0CC352A6F4}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{1A27BF71-4A01-4E0C-950F-EC892D55CF68}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2594,6 +2594,43 @@ WHERE ModifiedDate &gt; ?</property>
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151,42"
+          Id="Package\Sequence Container SalesHeader\Data Flow Task"
+          TopLeft="36,87" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Sequence Container SalesHeader\Execute SQL Task"
+          TopLeft="27,17" />
+        <EdgeLayout
+          Id="Package\Sequence Container SalesHeader.PrecedenceConstraints[Constraint 2]"
+          TopLeft="110,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="257,184"
+          Size="257,227"
+          Id="Package\Sequence Container SalesHeader"
+          TopLeft="43,30" />
+        <NodeLayout
+          Size="151,42"
           Id="Package\Sequence SalesOrderDetail\Data Flow Task"
           TopLeft="36,87" />
         <NodeLayout
@@ -2629,245 +2666,9 @@ WHERE ModifiedDate &gt; ?</property>
           Size="229,199"
           Id="Package\Sequence SalesOrderDetail"
           TopLeft="58,267" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Sequence Container SalesHeader\Data Flow Task"
-          TopLeft="36,87" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Sequence Container SalesHeader\Execute SQL Task"
-          TopLeft="27,17" />
-        <EdgeLayout
-          Id="Package\Sequence Container SalesHeader.PrecedenceConstraints[Constraint 2]"
-          TopLeft="110,59">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="257,158"
-          Size="257,201"
-          Id="Package\Sequence Container SalesHeader"
-          TopLeft="43,30" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task\Lookup"
-          TopLeft="195,107" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Source"
-          TopLeft="57,17" />
-        <EdgeLayout
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="132,59">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="119.5,48"
-              Start="0,0"
-              End="119.5,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="4,24" />
-                  <mssgle:LineSegment
-                    End="115.5,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="115.5,24"
-                    Point2="119.5,24"
-                    Point3="119.5,28" />
-                  <mssgle:LineSegment
-                    End="119.5,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Destination"
-          TopLeft="38,326" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task\Derived Column"
-          TopLeft="84,220" />
-        <EdgeLayout
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="251.5,149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-90.5,71"
-              Start="0,0"
-              End="-90.5,63.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5"
-                    Point2="0,35.5"
-                    Point3="-4,35.5" />
-                  <mssgle:LineSegment
-                    End="-86.5,35.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.5,35.5"
-                    Point2="-90.5,35.5"
-                    Point3="-90.5,39.5" />
-                  <mssgle:LineSegment
-                    End="-90.5,63.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-101.05638671875,40.5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="161,262">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-37.5,64"
-              Start="0,0"
-              End="-37.5,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28"
-                    Point2="0,32"
-                    Point3="-4,32" />
-                  <mssgle:LineSegment
-                    End="-33.5,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-33.5,32"
-                    Point2="-37.5,32"
-                    Point3="-37.5,36" />
-                  <mssgle:LineSegment
-                    End="-37.5,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Command"
-          TopLeft="265,325" />
-        <EdgeLayout
-          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="269,149">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="79,176"
-              Start="0,0"
-              End="79,168.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.8743455497382" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,67.8743455497382"
-                    Point2="0,71.8743455497382"
-                    Point3="4,71.8743455497382" />
-                  <mssgle:LineSegment
-                    End="75,71.8743455497382" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75,71.8743455497382"
-                    Point2="79,71.8743455497382"
-                    Point3="79,75.8743455497382" />
-                  <mssgle:LineSegment
-                    End="79,168.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8.69138671875,76.8743455497382,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[erp].[SalesOrderDetail]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container SalesHeader\Data Flow Task">
     <LayoutInfo>
@@ -3047,6 +2848,174 @@ WHERE ModifiedDate &gt; ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task\Lookup"
+          TopLeft="195,107" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Source"
+          TopLeft="57,17" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Command"
+          TopLeft="265,325" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task\Derived Column"
+          TopLeft="84,220" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Destination"
+          TopLeft="38,326" />
+        <EdgeLayout
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="251.5,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-90.5,71"
+              Start="0,0"
+              End="-90.5,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5"
+                    Point2="0,35.5"
+                    Point3="-4,35.5" />
+                  <mssgle:LineSegment
+                    End="-86.5,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86.5,35.5"
+                    Point2="-90.5,35.5"
+                    Point3="-90.5,39.5" />
+                  <mssgle:LineSegment
+                    End="-90.5,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.05638671875,40.5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="269,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79,176"
+              Start="0,0"
+              End="79,168.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.8743455497382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67.8743455497382"
+                    Point2="0,71.8743455497382"
+                    Point3="4,71.8743455497382" />
+                  <mssgle:LineSegment
+                    End="75,71.8743455497382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75,71.8743455497382"
+                    Point2="79,71.8743455497382"
+                    Point3="79,75.8743455497382" />
+                  <mssgle:LineSegment
+                    End="79,168.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.69138671875,76.8743455497382,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="161,262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37.5,64"
+              Start="0,0"
+              End="-37.5,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="-4,32" />
+                  <mssgle:LineSegment
+                    End="-33.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.5,32"
+                    Point2="-37.5,32"
+                    Point3="-37.5,36" />
+                  <mssgle:LineSegment
+                    End="-37.5,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence SalesOrderDetail\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="132,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.5,48"
+              Start="0,0"
+              End="119.5,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="115.5,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.5,24"
+                    Point2="119.5,24"
+                    Point3="119.5,28" />
+                  <mssgle:LineSegment
+                    End="119.5,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Destination">
     <Properties>
@@ -3057,6 +3026,37 @@ WHERE ModifiedDate &gt; ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[erp].[SalesOrderDetail]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence SalesOrderDetail\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

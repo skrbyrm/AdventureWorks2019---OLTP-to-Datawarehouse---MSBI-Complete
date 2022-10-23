@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{323DEDFF-8C39-48D9-B2D0-C4C2EF25EA63}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{01C4775F-F332-4142-80A6-68EA930A1F52}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -69,7 +69,7 @@
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>ERP-increment.dtsx</PackageName>
+              <PackageName>IncrementalLoad.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>

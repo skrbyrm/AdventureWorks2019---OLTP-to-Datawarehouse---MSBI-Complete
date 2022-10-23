@@ -11,126 +11,165 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{E84DA124-3DBF-4133-9F01-82DEB9D69B20}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{8817CD67-8E9C-4EED-B70D-8EB94C3AB876}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Load Employe with SCD"
+      DTS:refId="Package\LoadFacts"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{D65D351C-6CFD-485D-AD30-FD3E77AB9C9B}"
+      DTS:DTSID="{1494B12F-F0E5-4CBF-8D55-C88346E10BE4}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Employe with SCD"
+      DTS:ObjectName="LoadFacts"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>SCD-Load.dtsx</PackageName>
+          <PackageName>LoadFacts.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Refresh DimCurrency"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6041F3DF-861F-471A-A573-C12A88DE0467}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BA59A584-08FA-4B19-9B30-5BA18A2A4CEA}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimCurrency"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="Sequence Container">
       <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCurrency]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Refresh DimCustomer"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{7b88450f-5bd8-4e64-b1a8-1320d8fc1ed9}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimCustomer"
-      DTS:ThreadHint="1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCustomer]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Refresh DimDate"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{7ca96981-a2a1-44fc-84de-5984bd5373bf}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimDate"
-      DTS:ThreadHint="2">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimDate]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Refresh DimProduct"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{2e3ca3b1-c4b0-4f6b-ac36-1d664559b13c}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimProduct"
-      DTS:ThreadHint="3">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimProduct]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Refresh DimReseller"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{80a79e25-099c-4aca-81d8-91169a22eb1b}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimReseller"
-      DTS:ThreadHint="4">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_Reseller]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Refresh DimSalesTerritory"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{98dc68c4-5a42-4c39-82cd-ccc9d845a79e}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Refresh DimSalesTerritory"
-      DTS:ThreadHint="5">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
-          SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimSalesTerritory]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Load Employe with SCD"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D65D351C-6CFD-485D-AD30-FD3E77AB9C9B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Employe with SCD"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>SCD-Load.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimCurrency"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{6041F3DF-861F-471A-A573-C12A88DE0467}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimCurrency"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCurrency]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimCustomer"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{7b88450f-5bd8-4e64-b1a8-1320d8fc1ed9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimCustomer"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimCustomer]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimDate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{7ca96981-a2a1-44fc-84de-5984bd5373bf}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimDate"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimDate]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimProduct"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2e3ca3b1-c4b0-4f6b-ac36-1d664559b13c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimProduct"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimProduct]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimReseller"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{80a79e25-099c-4aca-81d8-91169a22eb1b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimReseller"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_Reseller]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Refresh DimSalesTerritory"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{98dc68c4-5a42-4c39-82cd-ccc9d845a79e}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Refresh DimSalesTerritory"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E008B82D-36F3-4DEB-AA11-277B3258E151}"
+              SQLTask:SqlStatementSource="EXEC [dbo].[Refresh_DimSalesTerritory]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0ED2823F-E8B0-4A13-983B-62FFF4C2FBB6}"
+      DTS:From="Package\Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\LoadFacts" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -142,35 +181,80 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Refresh DimCurrency"
-          TopLeft="74,24" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Refresh DimCustomer"
-          TopLeft="71,103" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Refresh DimDate"
-          TopLeft="79,177" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Refresh DimProduct"
-          TopLeft="80,262" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Refresh DimReseller"
-          TopLeft="74,423" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Refresh DimSalesTerritory"
-          TopLeft="73,343" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="191,42"
-          Id="Package\Load Employe with SCD"
-          TopLeft="73,501" />
+          Id="Package\Sequence Container\Load Employe with SCD"
+          TopLeft="163,230" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Sequence Container\Refresh DimCurrency"
+          TopLeft="52,24" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Sequence Container\Refresh DimCustomer"
+          TopLeft="52,89" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Sequence Container\Refresh DimDate"
+          TopLeft="68,154" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Sequence Container\Refresh DimProduct"
+          TopLeft="284,21" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Sequence Container\Refresh DimReseller"
+          TopLeft="291,153" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Sequence Container\Refresh DimSalesTerritory"
+          TopLeft="270,92" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="497,327"
+          Size="497,370"
+          Id="Package\Sequence Container"
+          TopLeft="40,27" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\LoadFacts"
+          TopLeft="124,434" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="288.5,397">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.5,37"
+              Start="0,0"
+              End="-101.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="-4,18.5" />
+                  <mssgle:LineSegment
+                    End="-97.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.5,18.5"
+                    Point2="-101.5,18.5"
+                    Point3="-101.5,22.5" />
+                  <mssgle:LineSegment
+                    End="-101.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

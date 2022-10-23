@@ -7,15 +7,44 @@ Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "AdventureWorks2019 - to Sta
 EndProject
 Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "AdventureWorks2019Stagging  - to DW DB", "AdventureWorks2019Stagging  - to DW DB\AdventureWorks2019Stagging  - to DW DB.dtproj", "{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}"
 EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "SSAS - AdvDW2019", "SSAS - AdvDW2019\SSAS - AdvDW2019.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Development|Default = Development|Default
+		Debug|x86 = Debug|x86
+		DebugLocal|x86 = DebugLocal|x86
+		Development|x86 = Development|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Development|Default.ActiveCfg = Development
-		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Development|Default.Build.0 = Development
-		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Development|Default.ActiveCfg = Development
-		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Development|Default.Build.0 = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Debug|x86.ActiveCfg = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Debug|x86.Build.0 = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.DebugLocal|x86.ActiveCfg = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.DebugLocal|x86.Build.0 = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Development|x86.ActiveCfg = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Development|x86.Build.0 = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Release|x86.ActiveCfg = Development
+		{6A802E2D-050D-4A05-B4F3-047CFDEA7BD5}.Release|x86.Build.0 = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Debug|x86.ActiveCfg = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Debug|x86.Build.0 = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.DebugLocal|x86.ActiveCfg = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.DebugLocal|x86.Build.0 = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Development|x86.ActiveCfg = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Development|x86.Build.0 = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Release|x86.ActiveCfg = Development
+		{DDE38DD3-B2B4-45F7-A3DE-F8A9B8AFBB2E}.Release|x86.Build.0 = Development
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.Deploy.0 = Development|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
