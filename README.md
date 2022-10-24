@@ -3,7 +3,7 @@
 ### AdventureWorks2019---OLTP-to-Datawarehouse--- end-to end - MSBI-Complete 
 
 ### The project content will continue step by step.
-Topics;
+
 #### 1. SSIS
   * ETL (Load Source to Staging DB Layer)
   * ETL (Load Satging to Data Warehouse)
